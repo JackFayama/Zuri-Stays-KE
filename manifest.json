@@ -5,7 +5,7 @@
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#f43f5e",
+  "theme_color": "#ffffff",
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
@@ -45,7 +45,7 @@
       "src": "icons/icon-180x180.png",
       "sizes": "180x180",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "maskable any"
     },
     {
       "src": "icons/icon-192x192.png",
@@ -75,9 +75,7 @@
       "icons": [
         {
           "src": "icons/icon-96x96.png",
-          "sizes": "96x96",
-          "type": "image/png",
-          "purpose": "any"
+          "sizes": "96x96"
         }
       ]
     },
@@ -89,9 +87,7 @@
       "icons": [
         {
           "src": "icons/icon-96x96.png",
-          "sizes": "96x96",
-          "type": "image/png",
-          "purpose": "any"
+          "sizes": "96x96"
         }
       ]
     }
