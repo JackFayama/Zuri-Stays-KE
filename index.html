@@ -1,32 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <title>Zuri Stays KE - Your Home Away From Home</title>
 
-  <!-- PWA Meta Tags -->
-  <meta name="theme-color" content="#ffffff"> <!-- Changed from #f43f5e to white -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="Zuri Stays KE">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="Zuri Stays KE">
+  <!-- PWA Meta -->
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="application-name" content="Zuri Stays KE" />
+  <meta name="apple-mobile-web-app-title" content="Zuri Stays KE" />
 
-  <!-- Apple Touch Icons -->
-  <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180x180.png">
-  <link rel="apple-touch-icon" sizes="192x192" href="icons/icon-192x192.png">
-  <link rel="apple-touch-icon" sizes="512x512" href="icons/icon-512x512.png">
+  <!-- Icons -->
+  <link rel="apple-touch-icon" sizes="152x152" href="icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="icon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="icon-512x512.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="icon-512x512.png" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-72x72.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="icons/icon-96x96.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512x512.png">
-
-  <!-- Web Manifest -->
-  <link rel="manifest" href="manifest.json">
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json" />
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
@@ -2206,20 +2202,14 @@
         loadData();
         render();
     </script>
-    <script src="pwa-utils.js"></script>
-    <!-- Service Worker Registration -->
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
-      .then((registration) => {
-        console.log('SW registered: ', registration);
-      })
-      .catch((registrationError) => {
-        console.log('SW registration failed: ', registrationError);
-      });
-  });
-}
+    <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(reg => console.log('Service Worker registered', reg))
+        .catch(err => console.error('Service Worker registration failed', err));
+    });
+  }
 </script>
 
 </body>
