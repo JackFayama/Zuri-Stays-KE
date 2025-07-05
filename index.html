@@ -558,7 +558,40 @@
             } else {
                 AppState.filteredListings = AppState.listings;
             }
-            render();
+            
+            // Only update the listings section, not the entire page
+            updateListingsOnly();
+        };
+
+        // New function to update only the listings section
+        const updateListingsOnly = () => {
+            const listingsContainer = document.getElementById('listings-container');
+            if (listingsContainer) {
+                listingsContainer.innerHTML = `
+                    <!-- Search Results -->
+                    ${AppState.searchQuery ? `
+                        <div class="mb-6">
+                            <p class="text-gray-600">
+                                ${AppState.filteredListings.length} result${AppState.filteredListings.length !== 1 ? 's' : ''} for "${AppState.searchQuery}"
+                            </p>
+                        </div>
+                    ` : ''}
+
+                    <!-- Listings Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                        ${AppState.filteredListings.map(listing => ListingCard(listing)).join('')}
+                    </div>
+
+                    <!-- Empty State -->
+                    ${AppState.filteredListings.length === 0 ? `
+                        <div class="text-center py-12">
+                            <p class="text-gray-600 text-lg">
+                                ${AppState.searchQuery ? 'No listings found matching your search.' : 'No listings available at the moment.'}
+                            </p>
+                        </div>
+                    ` : ''}
+                `;
+            }
         };
 
         // Authentication
@@ -619,7 +652,6 @@
                                     <input
                                         type="text"
                                         id="searchInput"
-                                        value="${AppState.searchQuery}"
                                         oninput="handleSearch(this.value)"
                                         placeholder="Search destinations, hosts..."
                                         class="w-full pl-9 sm:pl-10 pr-4 py-2 text-sm border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent"
@@ -715,7 +747,6 @@
                         <input
                             type="text"
                             id="mobileSearchInput"
-                            value="${AppState.searchQuery}"
                             oninput="handleSearch(this.value)"
                             placeholder="Search destinations, hosts, or properties..."
                             class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent"
@@ -1570,28 +1601,30 @@
                 
                 <!-- Main Content -->
                 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                    <!-- Search Results -->
-                    ${AppState.searchQuery ? `
-                        <div class="mb-6">
-                            <p class="text-gray-600">
-                                ${AppState.filteredListings.length} result${AppState.filteredListings.length !== 1 ? 's' : ''} for "${AppState.searchQuery}"
-                            </p>
-                        </div>
-                    ` : ''}
+                    <div id="listings-container">
+                        <!-- Search Results -->
+                        ${AppState.searchQuery ? `
+                            <div class="mb-6">
+                                <p class="text-gray-600">
+                                    ${AppState.filteredListings.length} result${AppState.filteredListings.length !== 1 ? 's' : ''} for "${AppState.searchQuery}"
+                                </p>
+                            </div>
+                        ` : ''}
 
-                    <!-- Listings Grid -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                        ${AppState.filteredListings.map(listing => ListingCard(listing)).join('')}
+                        <!-- Listings Grid -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            ${AppState.filteredListings.map(listing => ListingCard(listing)).join('')}
+                        </div>
+
+                        <!-- Empty State -->
+                        ${AppState.filteredListings.length === 0 ? `
+                            <div class="text-center py-12">
+                                <p class="text-gray-600 text-lg">
+                                    ${AppState.searchQuery ? 'No listings found matching your search.' : 'No listings available at the moment.'}
+                                </p>
+                            </div>
+                        ` : ''}
                     </div>
-
-                    <!-- Empty State -->
-                    ${AppState.filteredListings.length === 0 ? `
-                        <div class="text-center py-12">
-                            <p class="text-gray-600 text-lg">
-                                ${AppState.searchQuery ? 'No listings found matching your search.' : 'No listings available at the moment.'}
-                            </p>
-                        </div>
-                    ` : ''}
                 </main>
 
                 <!-- Modals -->
