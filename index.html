@@ -455,102 +455,883 @@
         const initializeStorage = () => {
             if (!getStorageItem(StorageKeys.LISTINGS)) {
                 const sampleListings = [
-                    {
+  {
     id: '1',
-    name: 'Luxurious Apartment in Westlands',
-    location: 'Westlands, Nairobi',
-    price: 85,
-    images: ['p1.png', 'p2.png', 'p1.png'],
-    features: ['bed', 'kitchen', 'wifi', 'tv', 'shower', 'parking'],
+    name: 'Executive 1 Bedroom in Kilimani',
+    location: 'Lenana Road, Nairobi',
+    price: 38,
+    images: ['a1.png', 'a2.png', 'a3.png', 'a4.png', 'a5.png', 'a6.png', 'a7.png', 'a8.png', 'a9.png', 'a10.png', 'a11.png', 'a12.png', 'a13.png', 'a14.png', 'a15.png', 'a16.png', 'a17.png', 'a18.png'],
+    features: ['1bedroom', 'kitchen', 'wifi', 'netflix', 'shower', 'parking', 'gym'],
     hostId: '1',
-    hostName: 'Juliet Mbumbu',
-    hostProfilePicture: 'p1.png',
+    hostName: 'Juliet Mumbu',
+    hostProfilePicture: 'p1.jpg',
     description: 'Beautiful modern apartment with stunning city views',
     status: 'active',
     averageRating: 4.8,
-    totalReviews: 24
-},
-{
+    totalReviews: 38
+  },
+  {
     id: '2',
-    name: 'Cozy Studio in Karen',
-    location: 'Karen, Nairobi',
-    price: 65,
-    images: ['l2.png'],
-    features: ['bed', 'kitchen', 'wifi', 'shower'],
+    name: 'Modern 1 Bedroom in Kileleshwa',
+    location: 'Othaya Road, Nairobi',
+    price: 35,
+    images: ['b1.png', 'b2.png', 'b3.png', 'b4.png', 'b5.png', 'b6.png', 'b7.png', 'b8.png', 'b9.png', 'b10.png', 'b11.png', 'b12.png', 'b13.png', 'b14.png'],
+    features: ['1bedroom', 'kitchen', 'wifi', 'shower', 'netflix', 'parking', 'swimming pool'],
     hostId: '2',
-    hostName: 'Michael Chen',
-    hostProfilePicture: 'p2.png',
+    hostName: 'Ann Mwikali',
+    hostProfilePicture: 'p4.jpg',
     description: 'Perfect for couples and solo travelers',
     status: 'active',
-    averageRating: 4.6,
-    totalReviews: 18
-},
-{
+    averageRating: 4.4,
+    totalReviews: 12
+  },
+  {
     id: '3',
-    name: 'Penthouse Suite in Kilimani',
-    location: 'Kilimani, Nairobi',
-    price: 120,
-    images: ['l3.png'],
-    features: ['bed', 'kitchen', 'wifi', 'tv', 'shower', 'parking', 'pool', 'gym'],
+    name: 'Stylish 1Bedroom in Lovington',
+    location: 'Lovington Mall, Nairobi',
+    price: 33,
+    images: ['c0.png', 'c1.png', 'c2.png', 'c3.png', 'c4.png', 'c5.png', 'c6.png', 'c8.png', 'c9.png', 'c10.png', 'c11.png', 'c12.png', 'c13.png', 'c14.png', 'c15.png', 'c16.png', 'c18.png', 'c19.png', 'c20.png'],
+    features: ['1bedroom', 'kitchen', 'wifi', 'gym', 'balcony', 'dining area'],
     hostId: '3',
-    hostName: 'Emma Rodriguez',
-    hostProfilePicture: 'p3.png',
-    description: 'Luxury penthouse with premium amenities',
+    hostName: 'James Mukeu',
+    hostProfilePicture: 'p20.jpg',
+    description: 'Stylish 1Bedroom with premium amenities',
     status: 'active',
-    averageRating: 4.9,
-    totalReviews: 31
-},
-{
+    averageRating: 4.0,
+    totalReviews: 18
+  },
+  {
     id: '4',
-    name: 'Modern Loft in CBD',
-    location: 'CBD, Nairobi',
-    price: 95,
-    images: ['l4.png'],
-    features: ['bed', 'kitchen', 'wifi', 'tv', 'shower', 'parking'],
-    hostId: 'admin',
-    hostName: 'James Wilson',
-    hostProfilePicture: 'p2.png',
-    description: 'Contemporary loft in the heart of the city',
+    name: 'Modern 1Bedroom in Kilimani',
+    location: 'Ring Road, Nairobi',
+    price: 40,
+    images: ['d1.png', 'd2.png', 'd3.png', 'd4.png', 'd5.png', 'd6.png', 'd7.png', 'd8.png', 'd9.png', 'd10.png', 'd11.png', 'd12.png', 'd13.png', 'd14.png', 'd15.png', 'd16.png', 'd17.png', 'd18.png', 'd21.png', 'd22.png', 'd23.png', 'd24.png', 'd25.png', 'd26.png', 'd27.png', 'd28.png'],
+    features: ['1bedroom', 'kitchen', 'wifi', 'tv', 'shower', 'parking', 'dining area', 'balcony', 'gym', 'laundry area'],
+    hostId: '4',
+    hostName: 'Belinda Naliaka',
+    hostProfilePicture: 'p21.jpg',
+    description: 'Modern 1Bedroom in the heart of Lenana Road, Kilimani',
     status: 'active',
-    averageRating: 4.7,
-    totalReviews: 22
-}
-                ];
+    averageRating: 4.1,
+    totalReviews: 10
+  },
+  {
+    id: '5',
+    name: 'Luxury 1Bedroom in Kilimani',
+    location: 'Upper Hill Estate, Nairobi',
+    price: 35,
+    images: ['e1.png', 'e2.png', 'e3.png', 'e4.png', 'e5.png', 'e6.png', 'e7.png', 'e8.png', 'e9.png', 'e10.png', 'e11.png', 'e12.png', 'e13.png', 'e14.png', 'e15.png', 'e16.png', 'e17.png', 'e18.png', 'e21.png', 'e22.png', 'e23.png', 'e24.png'],
+    features: ['1bedroom', 'kitchen', 'air conditioning', 'hot shower', 'swimming pool', 'gym', 'free parking', 'laundry', 'wifi'],
+    hostId: '5',
+    hostName: 'Hudson Baraka',
+    hostProfilePicture: 'p22.jpg',
+    description: 'Modern Chic spacious 1Bedroom',
+    status: 'active',
+    averageRating: 0.0,
+    totalReviews: 0
+  },
+  {
+    id: '6',
+    name: '1Bedroom Paradise in Lovington',
+    location: 'Maziwa Road, Nairobi',
+    price: 30,
+    images: ['f1.png', 'f2.png', 'f3.png', 'f5.png', 'f6.png', 'f7.png', 'f8.png', 'f9.png', 'f10.png', 'f11.png', 'f12.png', 'f13.png', 'f14.png', 'f15.png', 'f16.png', 'f17.png', 'f18.png', 'f21.png', 'f22.png', 'f23.png', 'f24.png'],
+    features: ['1bedroom', 'kitchen', 'shower', 'free parking', 'laundry', 'wifi'],
+    hostId: '6',
+    hostName: 'Samuel Mogaka',
+    hostProfilePicture: 'p23.jpg',
+    description: 'Kick back and relax in this calm, stylish space.',
+    status: 'active',
+    averageRating: 4.0,
+    totalReviews: 2
+  }
+];
+
                 setStorageItem(StorageKeys.LISTINGS, sampleListings);
             }
 
             if (!getStorageItem(StorageKeys.REVIEWS)) {
                 const sampleReviews = [
                     {
-                        id: '1',
-                        userId: 'sample',
-                        listingId: '1',
-                        bookingId: 'sample',
-                        rating: 5,
-                        comment: 'Amazing place! The host was very accommodating and the location is perfect. The apartment was exactly as described and even better in person. Would definitely stay again!',
-                        createdAt: '2024-01-15',
-                        userName: 'John Doe'
-                    },
+    id: '16',
+    userId: 'kenya13',
+    listingId: '1',
+    bookingId: 'bk16',
+    rating: 5,
+    comment: 'Stylish, clean, and super comfortable. Perfect for a city escape.',
+    createdAt: '2024-11-02',
+    userName: 'Mercy Radebe'
+},
+{
+    id: '17',
+    userId: 'tanzania14',
+    listingId: '1',
+    bookingId: 'bk17',
+    rating: 5,
+    comment: 'Excellent communication and beautiful apartment. Felt at home.',
+    createdAt: '2024-11-05',
+    userName: 'Erick Mlay'
+},
+{
+    id: '18',
+    userId: 'usa15',
+    listingId: '1',
+    bookingId: 'bk18',
+    rating: 5,
+    comment: 'Everything was smooth and professional. Will book again.',
+    createdAt: '2024-11-09',
+    userName: 'Chloe Bennett'
+},
+{
+    id: '19',
+    userId: 'kenya16',
+    listingId: '1',
+    bookingId: 'bk19',
+    rating: 5,
+    comment: 'Perfectly located and very clean. Ideal for business trips.',
+    createdAt: '2024-11-13',
+    userName: 'Peter Kimani'
+},
+{
+    id: '20',
+    userId: 'tanzania17',
+    listingId: '1',
+    bookingId: 'bk20',
+    rating: 5,
+    comment: 'Host was amazing. The apartment exceeded expectations.',
+    createdAt: '2024-11-16',
+    userName: 'Asha Juma'
+},
+{
+    id: '21',
+    userId: 'usa18',
+    listingId: '1',
+    bookingId: 'bk21',
+    rating: 5,
+    comment: 'Very professional host. The unit was modern and spotless.',
+    createdAt: '2024-11-20',
+    userName: 'Jacob Anthonio'
+},
+{
+    id: '22',
+    userId: 'kenya19',
+    listingId: '1',
+    bookingId: 'bk22',
+    rating: 5,
+    comment: 'Luxury feel and super peaceful. Great stay in Kilimani.',
+    createdAt: '2024-11-24',
+    userName: 'Gladys Njoki'
+},
+{
+    id: '23',
+    userId: 'tanzania20',
+    listingId: '1',
+    bookingId: 'bk23',
+    rating: 5,
+    comment: 'Loved every detail. The balcony view was a plus.',
+    createdAt: '2024-11-28',
+    userName: 'Abdallah Salum'
+},
+{
+    id: '24',
+    userId: 'usa21',
+    listingId: '1',
+    bookingId: 'bk24',
+    rating: 5,
+    comment: 'Fantastic apartment in a prime location. Felt very safe.',
+    createdAt: '2024-12-02',
+    userName: 'Rebecca Sanders'
+},
+{
+    id: '25',
+    userId: 'kenya22',
+    listingId: '1',
+    bookingId: 'bk25',
+    rating: 5,
+    comment: 'Great experience. Very clean, quiet, and well-equipped.',
+    createdAt: '2024-12-06',
+    userName: 'Collins Mwangi'
+},
+{
+    id: '26',
+    userId: 'tanzania23',
+    listingId: '1',
+    bookingId: 'bk26',
+    rating: 5,
+    comment: 'Amazing hospitality. Will recommend to my friends.',
+    createdAt: '2024-12-09',
+    userName: 'Esther Nyoni'
+},
+{
+    id: '27',
+    userId: 'usa24',
+    listingId: '1',
+    bookingId: 'bk27',
+    rating: 5,
+    comment: 'Clean, secure, and well-located. Exactly what I needed.',
+    createdAt: '2024-12-13',
+    userName: 'James Hedwick'
+},
+{
+    id: '28',
+    userId: 'kenya25',
+    listingId: '1',
+    bookingId: 'bk28',
+    rating: 5,
+    comment: 'High-end furnishings and quiet environment. Great stay.',
+    createdAt: '2024-12-17',
+    userName: 'Miriam Achieng'
+},
+{
+    id: '29',
+    userId: 'tanzania26',
+    listingId: '1',
+    bookingId: 'bk29',
+    rating: 5,
+    comment: 'Super organized host and very responsive.',
+    createdAt: '2024-12-21',
+    userName: 'Steven Mangula'
+},
+{
+    id: '30',
+    userId: 'usa27',
+    listingId: '1',
+    bookingId: 'bk30',
+    rating: 5,
+    comment: 'The place was neat, luxurious, and just as described.',
+    createdAt: '2024-12-25',
+    userName: 'Sarah Mitchell'
+},
+{
+    id: '31',
+    userId: 'kenya28',
+    listingId: '1',
+    bookingId: 'bk31',
+    rating: 5,
+    comment: 'Top-notch apartment. Highly recommend for long stays.',
+    createdAt: '2025-01-02',
+    userName: 'George Muriuki'
+},
+{
+    id: '32',
+    userId: 'tanzania29',
+    listingId: '1',
+    bookingId: 'bk32',
+    rating: 5,
+    comment: 'Peaceful, clean, and well lit. Loved it.',
+    createdAt: '2025-01-06',
+    userName: 'Rukia Hassan'
+},
+{
+    id: '33',
+    userId: 'usa30',
+    listingId: '1',
+    bookingId: 'bk33',
+    rating: 5,
+    comment: 'Felt more like home than a rental. 10/10.',
+    createdAt: '2025-01-10',
+    userName: 'Kyle Anderson'
+},
+{
+    id: '34',
+    userId: 'kenya31',
+    listingId: '1',
+    bookingId: 'bk34',
+    rating: 5,
+    comment: 'All appliances worked perfectly. Very modern space.',
+    createdAt: '2025-01-15',
+    userName: 'Teresia Mutua'
+},
+{
+    id: '35',
+    userId: 'tanzania32',
+    listingId: '1',
+    bookingId: 'bk35',
+    rating: 5,
+    comment: 'Comfortable and stylish. Enjoyed the balcony views.',
+    createdAt: '2025-01-20',
+    userName: 'Kelvin Mussa'
+},
+{
+    id: '36',
+    userId: 'usa33',
+    listingId: '1',
+    bookingId: 'bk36',
+    rating: 5,
+    comment: 'Truly executive. The photos don’t even do it justice.',
+    createdAt: '2025-01-24',
+    userName: 'Brittany Tiffany'
+},
+{
+    id: '37',
+    userId: 'kenya34',
+    listingId: '1',
+    bookingId: 'bk37',
+    rating: 5,
+    comment: 'Safe and central location. Host was helpful and polite.',
+    createdAt: '2025-01-28',
+    userName: 'Dennis Wachira'
+},
+{
+    id: '38',
+    userId: 'tanzania35',
+    listingId: '1',
+    bookingId: 'bk38',
+    rating: 5,
+    comment: 'Loved how quiet and secure the building was.',
+    createdAt: '2025-02-02',
+    userName: 'Lucy Mtui'
+},
+{
+    id: '39',
+    userId: 'usa36',
+    listingId: '1',
+    bookingId: 'bk39',
+    rating: 5,
+    comment: 'Exceptional hospitality and well-thought-out space.',
+    createdAt: '2025-02-06',
+    userName: 'Brandon Moore'
+},
+{
+    id: '40',
+    userId: 'kenya37',
+    listingId: '1',
+    bookingId: 'bk40',
+    rating: 5,
+    comment: 'This place is a hidden gem. Very clean and classy.',
+    createdAt: '2025-02-11',
+    userName: 'Caroline Gathoni'
+},
+{
+    id: '41',
+    userId: 'tanzania38',
+    listingId: '1',
+    bookingId: 'bk41',
+    rating: 5,
+    comment: 'Booked for work travel. Quiet and convenient.',
+    createdAt: '2025-02-15',
+    userName: 'Hussein Ally'
+},
+{
+    id: '42',
+    userId: 'usa39',
+    listingId: '1',
+    bookingId: 'bk42',
+    rating: 5,
+    comment: 'Great stay. Impeccable service and sparkling clean.',
+    createdAt: '2025-02-20',
+    userName: 'Jennifer Theo'
+},
+{
+    id: '43',
+    userId: 'kenya40',
+    listingId: '1',
+    bookingId: 'bk43',
+    rating: 5,
+    comment: 'Loved the space and location. Kilimani is the best.',
+    createdAt: '2025-02-25',
+    userName: 'Paul Ndungu'
+},
+{
+    id: '44',
+    userId: 'tanzania41',
+    listingId: '1',
+    bookingId: 'bk44',
+    rating: 5,
+    comment: 'Smooth check-in, elegant space, amazing host.',
+    createdAt: '2025-03-01',
+    userName: 'Janeth Mbaga'
+},
+{
+    id: '45',
+    userId: 'usa42',
+    listingId: '1',
+    bookingId: 'bk45',
+    rating: 5,
+    comment: 'Everything was top-notch. Will definitely return.',
+    createdAt: '2025-03-06',
+    userName: 'William Thomson'
+},
+{
+    id: '46',
+    userId: 'kenya43',
+    listingId: '1',
+    bookingId: 'bk46',
+    rating: 5,
+    comment: 'Bright, airy, and exactly like the pictures.',
+    createdAt: '2025-03-10',
+    userName: 'Lucy Aoko'
+},
+{
+    id: '47',
+    userId: 'tanzania44',
+    listingId: '1',
+    bookingId: 'bk47',
+    rating: 5,
+    comment: 'Loved the decor and peaceful ambiance.',
+    createdAt: '2025-03-14',
+    userName: 'Ismail Baraka'
+},
+{
+    id: '48',
+    userId: 'usa45',
+    listingId: '1',
+    bookingId: 'bk48',
+    rating: 5,
+    comment: 'Easy access, beautiful space, great service.',
+    createdAt: '2025-03-19',
+    userName: 'Laura Waprick'
+},
+{
+    id: '49',
+    userId: 'kenya46',
+    listingId: '1',
+    bookingId: 'bk49',
+    rating: 5,
+    comment: 'Modern, spacious and super clean.',
+    createdAt: '2025-03-23',
+    userName: 'Evans Kibet'
+},
+{
+    id: '50',
+    userId: 'tanzania47',
+    listingId: '1',
+    bookingId: 'bk50',
+    rating: 5,
+    comment: 'The apartment had everything I needed and more.',
+    createdAt: '2025-03-28',
+    userName: 'Zainabu Kondo'
+},
+{
+    id: '51',
+    userId: 'usa48',
+    listingId: '1',
+    bookingId: 'bk51',
+    rating: 5,
+    comment: 'Professional hosting and top-tier cleanliness.',
+    createdAt: '2025-04-02',
+    userName: 'Adam Clark'
+},
+{
+    id: '52',
+    userId: 'kenya49',
+    listingId: '1',
+    bookingId: 'bk52',
+    rating: 5,
+    comment: 'Easy check-in, quiet neighborhood, fast WiFi.',
+    createdAt: '2025-04-07',
+    userName: 'Naomi Chege'
+},
+{
+    id: '53',
+    userId: 'tanzania50',
+    listingId: '1',
+    bookingId: 'bk53',
+    rating: 5,
+    comment: 'Peaceful retreat with everything nearby.',
+    createdAt: '2025-04-12',
+    userName: 'Said Mussa'
+},
                     {
-                        id: '2',
-                        userId: 'sample2',
-                        listingId: '1',
-                        bookingId: 'sample2',
-                        rating: 4,
-                        comment: 'Great apartment with all amenities. The kitchen was well-equipped and the bed was very comfortable. Only minor issue was the Wi-Fi speed, but overall excellent stay.',
-                        createdAt: '2024-01-10',
-                        userName: 'Jane Smith'
-                    },
-                    {
-                        id: '3',
-                        userId: 'sample3',
-                        listingId: '1',
-                        bookingId: 'sample3',
-                        rating: 5,
-                        comment: 'Sarah was an excellent host! The apartment is in a prime location with easy access to restaurants and shopping. Everything was clean and well-maintained.',
-                        createdAt: '2024-01-05',
-                        userName: 'Mike Johnson'
-                    }
+    id: '4',
+    userId: 'kenya01',
+    listingId: '2',
+    bookingId: 'bk4',
+    rating: 5,
+    comment: 'Absolutely wonderful stay. The space was clean and quiet. Highly recommend!',
+    createdAt: '2024-02-01',
+    userName: 'Faith Wanjiru'
+},
+{
+    id: '5',
+    userId: 'tanzania02',
+    listingId: '2',
+    bookingId: 'bk5',
+    rating: 5,
+    comment: 'Fantastic host and beautiful apartment. Everything exceeded expectations.',
+    createdAt: '2024-02-03',
+    userName: 'Joseph Mbwana'
+},
+{
+    id: '6',
+    userId: 'usa03',
+    listingId: '2',
+    bookingId: 'bk6',
+    rating: 5,
+    comment: 'Great value for money. The location was ideal and the host was very responsive.',
+    createdAt: '2024-02-05',
+    userName: 'Ashley Cooper'
+},
+{
+    id: '7',
+    userId: 'kenya04',
+    listingId: '2',
+    bookingId: 'bk7',
+    rating: 4,
+    comment: 'Very nice and cozy place. Had a slight issue with hot water but resolved fast.',
+    createdAt: '2024-02-07',
+    userName: 'Brian Otieno'
+},
+{
+    id: '8',
+    userId: 'tanzania05',
+    listingId: '2',
+    bookingId: 'bk8',
+    rating: 5,
+    comment: 'Super clean, safe and peaceful. I really enjoyed my time here.',
+    createdAt: '2024-02-09',
+    userName: 'Neema Said'
+},
+{
+    id: '9',
+    userId: 'usa06',
+    listingId: '2',
+    bookingId: 'bk9',
+    rating: 5,
+    comment: 'Everything was just perfect. Loved the interior design and comfort.',
+    createdAt: '2024-02-11',
+    userName: 'Daniel Green'
+},
+{
+    id: '10',
+    userId: 'kenya07',
+    listingId: '2',
+    bookingId: 'bk10',
+    rating: 5,
+    comment: 'Exactly as shown in pictures. Great communication from host.',
+    createdAt: '2024-02-13',
+    userName: 'Linet Mwende'
+},
+{
+    id: '11',
+    userId: 'tanzania08',
+    listingId: '2',
+    bookingId: 'bk11',
+    rating: 4,
+    comment: 'Nice and quiet neighborhood. Minor delay at check-in but no big deal.',
+    createdAt: '2024-02-15',
+    userName: 'Hamisi Kweka'
+},
+{
+    id: '12',
+    userId: 'usa09',
+    listingId: '2',
+    bookingId: 'bk12',
+    rating: 5,
+    comment: 'Loved my stay. Will definitely book again next time I’m in town.',
+    createdAt: '2024-02-17',
+    userName: 'Emily Turner'
+},
+{
+    id: '13',
+    userId: 'kenya10',
+    listingId: '2',
+    bookingId: 'bk13',
+    rating: 5,
+    comment: 'Top-notch service and very clean space. Totally worth it.',
+    createdAt: '2024-02-19',
+    userName: 'David Njoroge'
+},
+{
+    id: '14',
+    userId: 'tanzania11',
+    listingId: '2',
+    bookingId: 'bk14',
+    rating: 5,
+    comment: 'The host was helpful and friendly. The place was spotless.',
+    createdAt: '2024-02-21',
+    userName: 'Janet Mwakalinga'
+},
+{
+    id: '15',
+    userId: 'usa12',
+    listingId: '2',
+    bookingId: 'bk15',
+    rating: 5,
+    comment: 'Highly recommend. Safe, stylish, and well-located.',
+    createdAt: '2024-02-23',
+    userName: 'Michael Harris'
+},
+{
+    id: '101',
+    userId: 'uganda01',
+    listingId: '3',
+    bookingId: 'bk101',
+    rating: 4,
+    comment: 'Nice apartment overall. Quiet and clean, but Wi-Fi could be faster.',
+    createdAt: '2024-05-08',
+    userName: 'Agnes Namatovu'
+},
+{
+    id: '102',
+    userId: 'china01',
+    listingId: '3',
+    bookingId: 'bk102',
+    rating: 4,
+    comment: 'Good location and safe neighborhood. Kitchen was a bit small.',
+    createdAt: '2024-05-18',
+    userName: 'Wei Zhang'
+},
+{
+    id: '103',
+    userId: 'ethiopia01',
+    listingId: '3',
+    bookingId: 'bk103',
+    rating: 4,
+    comment: 'Comfortable place with great lighting. Parking was a bit tight.',
+    createdAt: '2024-06-01',
+    userName: 'Abel Getachew'
+},
+{
+    id: '104',
+    userId: 'kenya56',
+    listingId: '3',
+    bookingId: 'bk104',
+    rating: 4,
+    comment: 'Loved the balcony space. Water pressure in the shower was low.',
+    createdAt: '2024-06-14',
+    userName: 'Gloria Nyaboke'
+},
+{
+    id: '105',
+    userId: 'tanzania51',
+    listingId: '3',
+    bookingId: 'bk105',
+    rating: 4,
+    comment: 'Very cozy and peaceful. Mattress could be firmer.',
+    createdAt: '2024-07-03',
+    userName: 'Hamisi Rajabu'
+},
+{
+    id: '106',
+    userId: 'usa52',
+    listingId: '3',
+    bookingId: 'bk106',
+    rating: 4,
+    comment: 'Clean and secure apartment. A few utensils were missing.',
+    createdAt: '2024-08-10',
+    userName: 'Natalie Brooks'
+},
+{
+    id: '107',
+    userId: 'uganda02',
+    listingId: '3',
+    bookingId: 'bk107',
+    rating: 4,
+    comment: 'Nice host, prompt responses. A/C was a bit noisy.',
+    createdAt: '2024-09-22',
+    userName: 'Brian Musoke'
+},
+{
+    id: '108',
+    userId: 'china02',
+    listingId: '3',
+    bookingId: 'bk108',
+    rating: 4,
+    comment: 'Modern design and safe area. Kitchen tools need upgrading.',
+    createdAt: '2024-10-05',
+    userName: 'Liu Wen'
+},
+{
+    id: '109',
+    userId: 'ethiopia02',
+    listingId: '3',
+    bookingId: 'bk109',
+    rating: 4,
+    comment: 'The location is excellent. Sofa was a bit worn.',
+    createdAt: '2024-11-14',
+    userName: 'Senait Kebede'
+},
+{
+    id: '110',
+    userId: 'kenya57',
+    listingId: '3',
+    bookingId: 'bk110',
+    rating: 4,
+    comment: 'Affordable and well-furnished. Had to call for extra towels.',
+    createdAt: '2024-12-01',
+    userName: 'Vincent Kiptoo'
+},
+{
+    id: '111',
+    userId: 'tanzania52',
+    listingId: '3',
+    bookingId: 'bk111',
+    rating: 4,
+    comment: 'Loved the location. Curtains didn’t block out much light.',
+    createdAt: '2025-01-16',
+    userName: 'Rehema Shayo'
+},
+{
+    id: '112',
+    userId: 'usa53',
+    listingId: '3',
+    bookingId: 'bk112',
+    rating: 4,
+    comment: 'Very good value for money. Could use more power outlets.',
+    createdAt: '2025-02-10',
+    userName: 'Gregory Lane'
+},
+{
+    id: '113',
+    userId: 'uganda03',
+    listingId: '3',
+    bookingId: 'bk113',
+    rating: 4,
+    comment: 'Easy check-in and great area. Found a few ants in the kitchen.',
+    createdAt: '2025-03-04',
+    userName: 'Joan Adoch'
+},
+{
+    id: '114',
+    userId: 'china03',
+    listingId: '3',
+    bookingId: 'bk114',
+    rating: 4,
+    comment: 'Nice environment and quiet nights. Water heater was slow.',
+    createdAt: '2025-03-25',
+    userName: 'Chen Hao'
+},
+{
+    id: '115',
+    userId: 'ethiopia03',
+    listingId: '3',
+    bookingId: 'bk115',
+    rating: 4,
+    comment: 'Modern layout and comfy bed. Had to wait for check-in.',
+    createdAt: '2025-04-11',
+    userName: 'Tigist Mekonnen'
+},
+{
+    id: '116',
+    userId: 'kenya58',
+    listingId: '3',
+    bookingId: 'bk116',
+    rating: 4,
+    comment: 'Stylish decor and quiet building. Gate remote failed once.',
+    createdAt: '2025-05-07',
+    userName: 'Rose Wanjiru'
+},
+{
+    id: '117',
+    userId: 'tanzania53',
+    listingId: '3',
+    bookingId: 'bk117',
+    rating: 4,
+    comment: 'Host was friendly and responsive. Room lighting a bit dim.',
+    createdAt: '2025-06-08',
+    userName: 'Moses Maganga'
+},
+{
+    id: '118',
+    userId: 'usa54',
+    listingId: '3',
+    bookingId: 'bk118',
+    rating: 4,
+    comment: 'Comfortable stay. Would be perfect with a stronger shower.',
+    createdAt: '2025-07-04',
+    userName: 'Rachel Simmons'
+},
+{
+    id: '201',
+    userId: 'kenya60',
+    listingId: '4',
+    bookingId: 'bk201',
+    rating: 5,
+    comment: 'Very elegant and clean apartment. Loved the peaceful neighborhood.',
+    createdAt: '2024-10-04',
+    userName: 'Linet Wambui'
+},
+{
+    id: '202',
+    userId: 'kenya61',
+    listingId: '4',
+    bookingId: 'bk202',
+    rating: 5,
+    comment: 'Exceptional service and beautiful space. Will return for sure.',
+    createdAt: '2024-11-10',
+    userName: 'Brian Gikonyo'
+},
+{
+    id: '203',
+    userId: 'kenya62',
+    listingId: '4',
+    bookingId: 'bk203',
+    rating: 5,
+    comment: 'Great location, modern decor, and very secure. Highly recommend.',
+    createdAt: '2024-12-05',
+    userName: 'Nancy Chebet'
+},
+{
+    id: '204',
+    userId: 'kenya63',
+    listingId: '4',
+    bookingId: 'bk204',
+    rating: 5,
+    comment: 'Everything was clean and well maintained. Host was very polite.',
+    createdAt: '2025-01-09',
+    userName: 'Kevin Otieno'
+},
+{
+    id: '205',
+    userId: 'kenya64',
+    listingId: '4',
+    bookingId: 'bk205',
+    rating: 5,
+    comment: 'The apartment exceeded my expectations. Very cozy and private.',
+    createdAt: '2025-02-03',
+    userName: 'Joy Nyambura'
+},
+{
+    id: '206',
+    userId: 'kenya65',
+    listingId: '4',
+    bookingId: 'bk206',
+    rating: 5,
+    comment: 'Perfect for solo stays. Balcony views were amazing!',
+    createdAt: '2025-03-14',
+    userName: 'Amos Mwenda'
+},
+{
+    id: '207',
+    userId: 'kenya66',
+    listingId: '4',
+    bookingId: 'bk207',
+    rating: 5,
+    comment: 'Felt safe and relaxed throughout my stay. Everything worked well.',
+    createdAt: '2025-04-08',
+    userName: 'Patricia Njeri'
+},
+{
+    id: '208',
+    userId: 'kenya67',
+    listingId: '4',
+    bookingId: 'bk208',
+    rating: 5,
+    comment: 'Clean, central, and peaceful. Will definitely recommend to friends.',
+    createdAt: '2025-05-12',
+    userName: 'Allan Kipruto'
+},
+{
+    id: '209',
+    userId: 'kenya68',
+    listingId: '4',
+    bookingId: 'bk209',
+    rating: 5,
+    comment: 'Professional host and top-class setup. Really enjoyed my stay.',
+    createdAt: '2025-05-28',
+    userName: 'Catherine Auma'
+},
+{
+    id: '210',
+    userId: 'kenya69',
+    listingId: '4',
+    bookingId: 'bk210',
+    rating: 5,
+    comment: 'Best Airbnb I’ve stayed in Nairobi. Clean, stylish, and convenient.',
+    createdAt: '2025-06-25',
+    userName: 'Mark Nderitu'
+}
                 ];
                 setStorageItem(StorageKeys.REVIEWS, sampleReviews);
             }
